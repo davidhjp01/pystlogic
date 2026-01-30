@@ -168,6 +168,7 @@ jobs:
       CIBW_DEPENDENCY_VERSIONS: latest
       CIBW_BUILD_VERBOSITY: 3
       MACOSX_DEPLOYMENT_TARGET: '11'
+      CIBW_ENVIRONMENT: CMAKE_BUILD_TYPE=Release
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-python@v5
