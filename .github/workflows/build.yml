@@ -176,6 +176,7 @@ jobs:
           python-version: '3.12'
       - name: Install dependencies
         run: pip install build twine cibuildwheel~=3.3.0
+      - uses: ilammy/msvc-dev-cmd@v1
       - name: Build wheels
         run: python -m cibuildwheel --output-dir ./dist
       - name: Run twine check
