@@ -35,7 +35,7 @@ class CMakeBuild(build_ext):
             if cmake_version < "3.1.0":
                 raise RuntimeError("CMake >= 3.1.0 is required on Windows")
 
-        self._use_ninja = True
+        self._use_ninja = False
         try:
             out = subprocess.check_output(["ninja", "--version"])
         except OSError:
